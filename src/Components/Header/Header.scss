@@ -1,0 +1,65 @@
+#header {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__nav {
+      gap: 30px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        width: 300px;
+        height: 36px;
+        background: #F4F5FB;
+        border-radius: 50px;
+        padding-left: 20px;
+        outline: none;
+        &::placeholder{
+          color: rgba(115, 115, 121, 0.44)  ;
+        }
+      }
+
+      &__icon {
+        position: absolute;
+        left: 290px;
+        color: rgba(115, 115, 121, 0.44);
+      }
+
+      &__sing {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        h1 {
+          font-size: 16px;
+          color: #000000;
+          font-weight: 400;
+          transition: 1s;
+
+          &:hover{
+            color: #2263FF;
+            transition: 1s;
+          }
+        }
+
+        h2 {
+          font-size: 16px;
+          color: #000000;
+          font-weight: 400;
+          transition: 1s;
+
+          &:hover{
+            color: #2263FF;
+            transition: 1s;
+          }
+        }
+      }
+    }
+  }
+}
+
+//background: url("../../img/res1.png") no-repeat center/cover;

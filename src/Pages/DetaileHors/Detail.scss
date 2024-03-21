@@ -3,31 +3,32 @@
     &__title {
       width: 400px;
       height: 585px;
-      background: #F4F5FB;
+      background: #f4f5fb;
       display: flex;
       flex-direction: column;
       align-items: center;
 
       &__img {
-        h3{
+        h3 {
           font-size: 18px;
           font-weight: 400;
           padding: 20px 0;
-          border-bottom: 2px solid #D9D9D9;
+          border-bottom: 2px solid #d9d9d9;
         }
-        h4{
+        h4 {
           padding-top: 10px;
-          color: #AEAEAE;
+          color: #aeaeae;
           font-size: 14px;
           font-weight: 400;
         }
-        h5{
+        h5 {
           font-size: 18px;
           font-weight: 400;
         }
         img {
           width: 330px;
           height: 350px;
+          object-fit: cover;
         }
       }
 
@@ -40,25 +41,24 @@
         &__icon {
           font-size: 45px;
         }
-        &__text{
-         h1{
-           font-size: 18px;
-           color: black;
-           font-weight: 400;
-           margin-right: 50px;
-         }
-          h2{
-            font-size: 14px;
-            color: #AEAEAE;
+        &__text {
+          h1 {
+            font-size: 18px;
+            color: black;
             font-weight: 400;
-
+            margin-right: 50px;
+          }
+          h2 {
+            font-size: 14px;
+            color: #aeaeae;
+            font-weight: 400;
           }
         }
       }
     }
-    &__nav{
-      button{
-        background: #2263FF;
+    &__nav {
+      button {
+        background: #2263ff;
         width: 245px;
         height: 50px;
         color: white;

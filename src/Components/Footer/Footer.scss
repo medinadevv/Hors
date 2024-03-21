@@ -3,31 +3,46 @@
   height: 302px;
 
   .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 150px;
-    margin-top: 30px;
-
-    &__title {
-  h1{
-    color: white;
-  }
-    }
-
-    &__contact {
+    &__titles {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
+      height: 150px;
+      margin-top: 30px;
 
-      &__info {
-        h2 {
-          color: #7E8085;
-        }
-
-        h3 {
+      &__title {
+        h1 {
           color: white;
         }
+      }
+
+      &__contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__info {
+          h2 {
+            color: #7E8085;
+          }
+
+          h3 {
+            color: white;
+          }
+        }
+      }
+    }
+
+    &__text {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      padding-top: 58px;
+
+      h3 {
+        font-size: 14px;
+        color: #AEAEAE;
+        font-weight: 400;
       }
     }
   }

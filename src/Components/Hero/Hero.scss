@@ -1,7 +1,19 @@
 #hero {
-  //background: url("../../img/Frame 26086296.png") no-repeat center/cover;
+  background: url("../../img/Frame1.png") no-repeat center/cover;
   height: 220px;
 
   .hero {
+    margin-top: 20px;
+    h1 {
+      font-weight: 700;
+      color: white;
+      font-size: 46px;
+    }
+    h2{
+      margin-top: 10px;
+      font-size: 24px;
+      color: #3F485FFF;
+      font-weight: 400;
+    }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Detail.scss'
-import {FaRegCircleUser} from "react-icons/fa6";
+import user from '../../img/User_cicrle_light.svg'
+
 
 const Detail = ({el}) => {
     console.log(el)
@@ -10,23 +11,23 @@ const Detail = ({el}) => {
                 <div className="detail">
                     <div className="detail__title">
                         <div className="detail__title__user">
-                            <FaRegCircleUser/>
+                            <img src={user} alt=""/>
                             <div className="detail__title__user__text">
                                 <h1>Аты-жөнү</h1>
                                 <h2>Ээси</h2>
                             </div>
                         </div>
                         <div className="detail__title__img">
-                            {/*<img src={el.img} alt=""/>*/}
-                            {/*<h1>{el.title.slice(0, 10)}</h1>*/}
-                        </div>
-                        <div className="detail__title__nav">
-
+                            <img src={`https://image.tmdb.org/t/p/w1280${el ? el.poster_path : ""}`} alt=""/>
+                            <h3>{el ? el.original_title : ''}</h3>
+                            <h4>Жылы</h4>
+                            <h5>2015</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 };
 

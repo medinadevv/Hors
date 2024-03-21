@@ -1,5 +1,69 @@
 #detail {
   .detail {
+    &__title {
+      width: 400px;
+      height: 585px;
+      background: #F4F5FB;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
+      &__img {
+        h3{
+          font-size: 18px;
+          font-weight: 400;
+          padding: 20px 0;
+          border-bottom: 2px solid #D9D9D9;
+        }
+        h4{
+          padding-top: 10px;
+          color: #AEAEAE;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        h5{
+          font-size: 18px;
+          font-weight: 400;
+        }
+        img {
+          width: 330px;
+          height: 350px;
+        }
+      }
+
+      &__user {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: 115px;
+        &__icon {
+          font-size: 45px;
+        }
+        &__text{
+         h1{
+           font-size: 18px;
+           color: black;
+           font-weight: 400;
+           margin-right: 50px;
+         }
+          h2{
+            font-size: 14px;
+            color: #AEAEAE;
+            font-weight: 400;
+
+          }
+        }
+      }
+    }
+    &__nav{
+      button{
+        background: #2263FF;
+        width: 245px;
+        height: 50px;
+        color: white;
+        font-size: 24px;
+      }
+    }
   }
 }

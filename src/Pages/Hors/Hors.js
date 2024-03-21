@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import './Hors.scss'
 import {API_KEY} from "../../Components/API/API";
 import Detail from "../DetaileHors/Detail";
 
@@ -10,7 +11,7 @@ const Hors = () => {
     function getHors() {
         axios(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
             .then((res) => {
-                setHors(res.data.result)
+                setHors(res.data.results)
             })
     }
 
@@ -26,8 +27,9 @@ const Hors = () => {
                         hors ?
                             hors.map((el) => (
                                     <Detail el={el}/>
+
                                 )
-                            ) : null
+                            ) : <h1>Loading</h1>
                     }
                 </div>
             </div>

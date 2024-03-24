@@ -3,16 +3,21 @@ import axios from "axios";
 import "./Hors.scss";
 import { API_KEY } from "../../Components/API/API";
 import Detail from "../DetaileHors/Detail";
+import { TOKEN } from "./../../Components/API/API";
 
 const Hors = () => {
   const [hors, setHors] = useState([]);
 
-  function getHors() {
-    axios(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`).then((res) => {
-      setHors(res.data.results);
-    });
+  async function getHors() {
+    try {
+      let { data } = await axios(`http://3.93.51.230/api/auth`);
+      setHors(data);
+    } catch (error) {
+      console.log(error.message);
+    }
   }
+
+  console.log(hors);
 
   useEffect(() => {
     getHors();
@@ -28,7 +33,9 @@ const Hors = () => {
             <h1>Loading</h1>
           )}
         </div>
-        <a href="https://wa.me/996557106446"><button>Жылкы кошуу</button></a>
+        <a href="https://wa.me/996557106446">
+          <button>Жылкы кошуу</button>
+        </a>
       </div>
     </div>
   );

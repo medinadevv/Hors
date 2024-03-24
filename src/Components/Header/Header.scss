@@ -1,4 +1,7 @@
 #header {
+  position: sticky;
+  top: 0;
+  background: white;
   .header {
     display: flex;
     align-items: center;
@@ -23,10 +26,14 @@
           color: rgba(115, 115, 121, 0.44);
         }
       }
-
-      &__icon {
+      .inputs{
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      &__icons {
         position: absolute;
-        left: 291px;
+        left: 90%;
         z-index: 10;
         background: #f4f5fb;
         width: 40px;
@@ -69,11 +76,13 @@
       }
 
       &__burger {
+        display: none;
         width: 30px;
         height: 20px;
         position: relative;
         margin-right: 10px;
-        z-index: 10;
+        z-index: 12;
+
         span {
           position: absolute;
           width: 100%;
@@ -81,13 +90,16 @@
           background-color: #000000;
           border-radius: 2px;
           transition: 0.3s;
+
           &:first-child {
             top: 0;
           }
+
           &:nth-child(2) {
             top: 50%;
             transform: translateY(-50%);
           }
+
           &:last-child {
             bottom: 0;
           }
@@ -102,7 +114,142 @@
   right: 0;
   width: 200px;
   height: 200px;
-  background-color: #b71010;
+  background-color:red;
   transition: 0.5s;
-  top: 45px;
+  top: 30px;
+  z-index: 11;
+  &__nav {
+    gap: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      width: 250px;
+      height: 36px;
+      background: #f4f5fb;
+      border-radius: 50px;
+      padding-left: 20px;
+      outline: none;
+
+      &::placeholder {
+        color: rgba(115, 115, 121, 0.44);
+      }
+    }
+
+    &__icons {
+      position: absolute;
+      left: 85%;
+      z-index: 10;
+      background: #f4f5fb;
+      width: 40px;
+      height: 36px;
+      border-radius: 0 50% 50% 0;
+      color: rgba(115, 115, 121, 0.44);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+  #header {
+    .header {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    .burgerMenu{
+      input{
+        display: none;
+      }
+
+    }
+    .container {
+      max-width: 768px;
+
+      .header {
+        &__nav {
+
+          &__sing {
+            display: none;
+          }
+
+          &__burger {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #header {
+    .burgerMenu {
+      input {
+        display: none;
+      }
+    }
+
+    .container {
+      max-width: 768px;
+
+      .header {
+        &__nav {
+          &__icon {
+            left: 211px;
+          }
+
+          input {
+            width: 230px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #header {
+    .burgerMenu {
+      input {
+        display: block;
+      }
+    }
+
+    .container {
+      max-width: 768px;
+
+      .header {
+        &__nav {
+          &__icon {
+          }
+
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  #header .header__nav {
+    display: none;
+  }
+  .burgerMenu__nav {
+    margin-top: 50px;
+    width: 150px;
+    input{
+      width: 150px;
+    }
+    &__icons{
+      left: 100%;
+    }
+  }
 }

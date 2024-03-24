@@ -9,8 +9,7 @@ const Hors = () => {
 
   function getHors() {
     axios(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
-    ).then((res) => {
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`).then((res) => {
       setHors(res.data.results);
     });
   }
@@ -29,6 +28,7 @@ const Hors = () => {
             <h1>Loading</h1>
           )}
         </div>
+        <a href="https://wa.me/996557106446"><button>Жылкы кошуу</button></a>
       </div>
     </div>
   );

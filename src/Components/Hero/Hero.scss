@@ -1,20 +1,163 @@
 #hero {
+  //display: none;
   background: url("../../img/Frame1.png") no-repeat center/cover;
   height: 220px;
   background-size: 100%;
 
   .hero {
-    margin-top: 20px;
+    display: flex;
+    align-items: start;
+    padding-top: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+
     h1 {
       font-weight: 700;
       color: white;
       font-size: 46px;
     }
+
     h2 {
-      margin-top: 10px;
+      padding-top: 20px;
       font-size: 24px;
       color: #3f485fff;
       font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    .hero {
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #hero {
+    .hero {
+      height: 87px;
+      margin-left: 20px;
+
+      h1 {
+        margin-top: 20px;
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 160px;
+    background-size: 125%;
+
+    .hero {
+      margin-left: 20px;
+
+      h1 {
+        margin-top: -18px;
+        font-size: 25px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-position: right;
+    height: 185px;
+    background-size: 182%;
+
+    .hero {
+      margin-left: 20px;
+
+      h1 {
+        margin-top: 20px;
+        font-size: 25px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #hero {
+    background-position: right;
+    height: 120px;
+    background-size: 170%;
+
+    .hero {
+      margin-left: 20px;
+
+      h1 {
+        margin-top: -15px;
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 12px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #hero {
+    background-position: right;
+    height: 112px;
+    background-size: 190%;
+
+    .hero {
+      margin-left: 20px;
+
+      h1 {
+        margin-top: -15px;
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 12px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  #hero {
+    background-position: right;
+    height: 130px;
+    background-size: 233%;
+
+    .hero {
+      margin-left: 20px;
+
+      h1 {
+        margin-top: -9px;
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 12px;
+        margin-bottom: 60px;
+        width: 250px;
+      }
     }
   }
 }

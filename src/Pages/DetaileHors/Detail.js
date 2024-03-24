@@ -17,11 +17,7 @@ const Detail = ({ el, idx }) => {
             </div>
             <div className="detail__title__img">
               <img
-                src={`https://image.tmdb.org/t/p/w1280${
-                  el ? el.poster_path : ""
-                }`}
-                alt=""
-              />
+                src={`https://image.tmdb.org/t/p/w1280${el ? el.poster_path : ""}`} alt=""/>
               <h3>{el ? el.original_title : ""}</h3>
               <h4>Жылы</h4>
               <h5>2015</h5>

@@ -1,0 +1,27 @@
+#signUp{
+  .signUp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    &--text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      input{
+        padding: 10px 20px;
+        font-size: 22px;
+        border:2px solid black;
+        border-radius: 5px;
+        outline: none;
+      }
+      button{
+        padding: 10px 20px;
+        font-size: 22px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

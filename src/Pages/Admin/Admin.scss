@@ -1,0 +1,48 @@
+#admin {
+  .admin {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 80px;
+    //padding-left: 370px;
+    &--title {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      input,select {
+        outline: none;
+        font-size: 15px;
+        width: 350px;
+        height: 40px;
+        border-radius: 10px;
+        margin: 15px 0;
+        padding-left: 20px;
+        border: 2px solid gray;
+
+      }
+      button {
+        outline: none;
+        font-size: 15px;
+        width: 370px;
+        height: 45px;
+        border-radius: 10px;
+        margin: 15px 0;
+        border: 2px solid gray;
+        transition: 1s;
+
+        &:hover {
+          transition: 1s;
+          border: 2px solid blue;
+          background: #142dfe;
+          color: white;
+        }
+      }
+    }
+    &--nav {
+      width: 250px;
+      height: 250px;
+      background: gray;
+      border-radius: 10px;
+    }
+  }
+}

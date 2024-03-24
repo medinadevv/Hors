@@ -1,0 +1,78 @@
+#profile {
+  .profile {
+    display: flex;
+    align-items: start;
+    gap: 50px;
+    //min-width: 100%;
+    .homeBlock{
+      height: 90vh;
+      width: 50vh;
+    }
+    &--blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 90vh;
+      width: 50vh;
+      background: white;
+      border-right: 2px solid black;
+      padding-top: 50px;
+      position: fixed;
+      top: 90px;
+
+      &__block {
+        padding: 5px 0 5px 20px;
+
+        .active {
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 62%;
+            left: 107%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 29px;
+          font-weight: 400;
+          color: black;
+        }
+      }
+
+      &__block1 {
+        padding: 5px 0 5px 20px;
+
+        .active {
+          position: relative;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 62%;
+            left: 110%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 29px;
+          font-weight: 400;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

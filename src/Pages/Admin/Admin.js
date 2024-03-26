@@ -22,14 +22,43 @@ const Admin = () => {
   });
 
   function handleImageValue(e) {
-    let file = e.target.files[0];
-    if (file) {
-      values.image.push(URL.createObjectURL(file));
-      setValues({
-        ...values,
-        image: values.image.slice(0, 5),
-      });
-    }
+    let file = e.target.files?.[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      let img = new Image();
+      img.src = reader.result;
+      img.onload = () => {
+        let canvas = document.createElement("canvas");
+        let ctx = canvas.getContext("2d");
+        if (!ctx) return;
+        let maxWidth = 800;
+        let maxHeight = 600;
+        let width = img.width;
+        let height = img.height;
+
+        if (width > maxWidth || height > maxHeight) {
+          let ratio = Math.min(maxWidth / width, maxHeight / height);
+          width *= ratio;
+          height *= ratio;
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+        ctx.drawImage(img, 0, 0, width, height);
+        let compressedUrl = canvas.toDataURL("image/jpeg");
+        if (compressedUrl) {
+          values.image.push(compressedUrl);
+          setValues({
+            ...values,
+            image: values.image.slice(0, 5),
+          });
+        }
+      };
+    };
+    reader.onerror = () => {
+      console.log("file", reader.error);
+    };
   }
 
   function handleInputValue(e) {
@@ -46,12 +75,15 @@ const Admin = () => {
   }
 
   async function handleAaddHors() {
-    await axios.post(`http://3.93.51.230/api/horse`, values, {
+    const res = await axios.post(`http://3.93.51.230/api/horse/`, values, {
       headers: {
         Authorization: TOKEN,
       },
     });
+    console.log(res);
   }
+
+  console.log(values);
 
   return (
     <div id="admin">
@@ -107,17 +139,17 @@ const Admin = () => {
             />
             <select onChange={handleInputValue} name="gender">
               <option value="man">Эркек</option>
-              <option value="woman">Ургаачы</option>
+              <option value="woman">MALE</option>
             </select>
             <input
               onChange={handleInputValue}
               name="fatherOfHorseId"
-              type="text"
+              type="number"
             />
             <input
               onChange={handleInputValue}
               name="matherOfHorseId"
-              type="text"
+              type="number"
             />
             <input
               onChange={handleInputValue}

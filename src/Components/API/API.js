@@ -6,4 +6,4 @@ export const admin = {
 };
 
 export const TOKEN =
-  "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTE1NjU0MTQsImlhdCI6MTcxMTMwNjIxNCwidXNlcm5hbWUiOiJzdHJpbmcifQ.qK7A2QNgjefWrQ0hM3PGD1QVussOSwTuNt75Jx5Pf6E";
+  "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTE2OTg4NTYsImlhdCI6MTcxMTQzOTY1NiwidXNlcm5hbWUiOiIrOTk2MjIxMjIyMjIyIn0.pRHrZi3F_wwybx7eRjn9qEDV-8VNagCiWEiZlQrNmCU";

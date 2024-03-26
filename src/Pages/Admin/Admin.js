@@ -5,49 +5,6 @@ import axios from "axios";
 import { TOKEN } from "./../../Components/API/API";
 
 const Admin = () => {
-  //  const [values, setValues] = useState({
-  //      image: '',
-  //      name: "",
-  //      profession: "",
-  //  });
-  //
-  //  function Img(e){
-  //      let file = e.target.files[0]
-  //      if(file){
-  //          setValues({...values , image:URL.createObjectURL(file)})
-  //      }
-  //  }
-  //  function handleInputValue(e) {
-  //      setValues({ ...values, [e.target.name]: e.target.value });
-  //  }
-  // async function addPost(){
-  //      let Object = {
-  //          image: [
-  //              values.image,
-  //              values.image,
-  //              values.image
-  //          ],
-  //          name: "Emir",
-  //          nameOfOwner: "Hors",
-  //          nickName: "KaraAt",
-  //          dateOfBirthday: "2024-03-24",
-  //          color: "black",
-  //          gender: "man",
-  //          fatherOfHorseId: 0,
-  //          matherOfHorseId: 0,
-  //          nameOfTrainer: "AAA",
-  //          nameOfSayapker: "BBB",
-  //          country: "Kyrgyzstan",
-  //          additionalData: "sssssssssss"
-  //      }
-  //      await axios.post('http://3.93.51.230/api/horse' , Object).then(res => {
-  //          alert('lol')
-  //          console.log(res)
-  //      }).catch(error => {
-  //          alert(error)
-  //      })
-  //  }
-
   const [values, setValues] = useState({
     image: [],
     name: "",
@@ -89,18 +46,12 @@ const Admin = () => {
   }
 
   async function handleAaddHors() {
-    try {
-      await axios.post("http://3.93.51.230/api/horse", values, {
-        headers: {
-          Authorization: TOKEN,
-        },
-      });
-    } catch (error) {
-      console.log(error.message);
-    }
+    await axios.post(`http://3.93.51.230/api/horse`, values, {
+      headers: {
+        Authorization: TOKEN,
+      },
+    });
   }
-
-  console.log(values);
 
   return (
     <div id="admin">
@@ -126,7 +77,6 @@ const Admin = () => {
             </div>
             <input
               onChange={handleInputValue}
-              //   value={values.name}
               name="name"
               type="text"
               placeholder="Аты"

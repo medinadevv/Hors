@@ -28,7 +28,9 @@ const Hors = () => {
       <div className="container">
         <div className="hors">
           {hors ? (
-            hors.map((el, idx) => <Detail el={el} idx={idx} />)
+            hors.map((el, idx) => (
+              <Detail getHors={getHors} el={el} idx={idx} />
+            ))
           ) : (
             <h1>Loading</h1>
           )}

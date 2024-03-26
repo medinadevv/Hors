@@ -5,7 +5,7 @@ import "./Detail.scss";
 import axios from "axios";
 import { TOKEN } from "./../../Components/API/API";
 
-const Detail = ({ el, idx }) => {
+const Detail = ({ getHors, el, idx }) => {
   const [del, setDel] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,10 @@ const Detail = ({ el, idx }) => {
         Authorization: TOKEN,
       },
     });
+    getHors();
   }
+
+  console.log();
 
   return (
     <div key={idx} id="detail">
@@ -35,7 +38,7 @@ const Detail = ({ el, idx }) => {
               </div>
             </div>
             <div className="detail__title__img">
-              <img src={el.imageOfHorse} alt="" />
+              <img src={el.imagesOfHorse[0]} alt="" />
               <h3>{el.nameOfHorse}</h3>
               <h4>Жылы</h4>
               <h5>{el.dateOFBirth}</h5>

@@ -51,7 +51,7 @@ const Admin = () => {
           values.image.push(compressedUrl);
           setValues({
             ...values,
-            image: values.image.slice(0, 5),
+            image: values.image.slice(0, 4),
           });
         }
       };

@@ -1,0 +1,121 @@
+#detailPage {
+  .detailPage {
+    padding: 25px 20px 0;
+    &__user {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+      &__text {
+        p {
+          &:first-child {
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 20px;
+          }
+          &:last-child {
+            color: rgb(174, 174, 174);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+    h1 {
+      margin: 41px 0 39px 0;
+      color: rgb(0, 0, 0);
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    &__horse {
+      display: flex;
+      gap: 80px;
+      margin-bottom: 70px;
+      &__img {
+        display: flex;
+        gap: 8px;
+        &__images {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          img {
+            border-radius: 2px;
+            width: 84.39px;
+            height: 112.52px;
+          }
+        }
+        &__one {
+          width: 416px;
+          height: 485px;
+          border-radius: 2px;
+        }
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h4 {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 18px;
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+    circle {
+      fill: none;
+      stroke: hsl(214, 97%, 59%);
+      stroke-width: 2;
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      animation: dash4 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}

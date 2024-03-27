@@ -4,9 +4,11 @@ import { useState } from "react";
 import "./Detail.scss";
 import axios from "axios";
 import { TOKEN } from "./../../Components/API/API";
+import { useNavigate } from "react-router-dom";
 
 const Detail = ({ getHors, el, idx }) => {
   const [del, setDel] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("user"))) {
@@ -23,8 +25,6 @@ const Detail = ({ getHors, el, idx }) => {
     getHors();
   }
 
-  console.log();
-
   return (
     <div key={idx} id="detail">
       <div className="container">
@@ -37,7 +37,10 @@ const Detail = ({ getHors, el, idx }) => {
                 <h2>Ээси</h2>
               </div>
             </div>
-            <div className="detail__title__img">
+            <div
+              onClick={() => navigate(`/detail_page/${el.id}`)}
+              className="detail__title__img"
+            >
               <img src={el.imagesOfHorse[0]} alt="" />
               <h3>{el.nameOfHorse}</h3>
               <h4>Жылы</h4>

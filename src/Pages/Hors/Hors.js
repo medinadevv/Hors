@@ -17,8 +17,6 @@ const Hors = () => {
     }
   }
 
-  console.log(hors);
-
   useEffect(() => {
     getHors();
   }, []);
@@ -27,12 +25,16 @@ const Hors = () => {
     <div id="hors">
       <div className="container">
         <div className="hors">
-          {hors ? (
+          {hors.length > 0 ? (
             hors.map((el, idx) => (
               <Detail getHors={getHors} el={el} idx={idx} />
             ))
           ) : (
-            <h1>Loading</h1>
+            <div className="loader">
+              <svg viewBox="25 25 50 50">
+                <circle r="20" cy="50" cx="50"></circle>
+              </svg>
+            </div>
           )}
         </div>
         <a href="https://wa.me/996557106446">
